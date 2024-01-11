@@ -2,7 +2,7 @@ name: Daily Snowflake to HubSpot Sync
 
 on:
   schedule:
-    - cron: "*/2 * * * *"
+    # - cron: "*/2 * * * *"
 
 jobs:
   sync-job:
