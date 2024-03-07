@@ -1,8 +1,6 @@
-name: Daily Snowflake to HubSpot Sync
+name: Backfill existing accounts data
 
-on:
-  schedule:
-    - cron: "0 0 * * *"
+on: workflow_dispatch
 
 jobs:
   sync-job:
@@ -14,5 +12,5 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: "18"
-      - name: transpile and run sync script
-        run: npm run start
+      - name: transpile and run initialise script that creates the account objects
+        run: npm run fill
